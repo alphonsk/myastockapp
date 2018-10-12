@@ -1,0 +1,25 @@
+<h1>Stocks#edit</h1>
+<p>Find me in app/views/stocks/edit.html.erb</p>
+
+<%= @stock %>
+ 
+
+<%= form_for @stock, html: {multipart: true} do |f| %>
+ 
+<div class="job-card">
+<table style="">
+ 
+  <tr>
+  	<th>Boat name:</th> 
+    <%= f.hidden_field :name, :value => @stock%>
+  </tr>
+  <tr>
+  
+</table>
+<%= f.submit "Update Boat" %>
+<% end %>
+ 
+  <div class="boatEditDelete">
+  
+  
+</div>

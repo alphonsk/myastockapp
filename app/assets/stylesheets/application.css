@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ 
+ .navSearch {
+    width: 58%;
+    height: 50px;
+    padding: 10px;
+    display: inline-block; 
+}
+
+.inp input[type=text] {
+    padding: 4px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 78%;
+    color: white;
+    background: grey;
+}
+
+.hb {
+    float: left;
+    width: 20%;
+    padding: 13px;
+    background: #2196F3; 
+    font-size: 17px;
+    border: 2px solid #2196F3;
+    border-left: none;
+    cursor: pointer;
+}
+
+.hb :hover {
+    background: #0b7dda;
+}
+
+#myText::after {
+    content: "";
+    clear: both;
+    display: table;
+}

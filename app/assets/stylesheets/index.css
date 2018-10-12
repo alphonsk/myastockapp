@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+div {
+     
+    border: 0;
+}
+
+
+.spacer {
+    background-color: #141F28; 
+    height: 30px;;
+    display: block;
+    margin-top: 7px;
+    margin-bottom: 7px;  
+    word-spacing: 30px; 
+    font-size: 14px;
+}
+
+ 
+body {
+    /* background-color: #141F28; */
+    background-color: #111b24; 
+    font-family: verdana, arial, sans-serif;
+    color: white;
+    min-width: 400px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+/* NAVBAR  */
+.NavBar {
+    width: 100%;
+    height: 55px;
+    padding: 3px; 
+    background-color: #141F28;
+}
+
+.navLogo {
+    width: 40%;
+    height: 50px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    vertical-align: top; 
+    display: inline-block; 
+}
+
+.navSearch {
+    width: 58%;
+    height: 50px;
+    padding: 10px;
+    display: inline-block; 
+}
+
+.inp input[type=text] {
+    padding: 4px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 78%;
+    color: white;
+    background: grey;
+}
+
+.hb {
+    float: left;
+    width: 20%;
+    padding: 13px;
+    background: #2196F3; 
+    font-size: 17px;
+    border: 2px solid #2196F3;
+    border-left: none;
+    cursor: pointer;
+}
+
+.hb :hover {
+    background: #0b7dda;
+}
+
+#myText::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+ 
+ 
+
+/* MAIN PAGE  */
+.main { 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+.userLog ul { 
+    padding-left: 9px;
+}
+
+.userLog {  
+    padding: 3px; 
+}
+
+.userLog li {
+    display: inline; 
+}
+
+
+/* ALL MYSTOCK BAR */
+.mainHeader { 
+    color: white; 
+    font-size: 17px; 
+    text-align: center;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    background-color: #141F28;
+}
+
+.allStocks {
+    display: inline-block;
+    width: 48%;
+    height: 40px;
+    padding: 10px; 
+}
+
+.myStocks {
+    display: inline-block;
+    width: 48%;
+    height: 40px;
+    padding: 10px; 
+}
+
+
+/* TABLE  */
+.mainTable {
+    color: white;
+    font-size: 15px;
+    width: 95%;
+    margin-left: 3%; 
+    table-layout: fixed;  
+}
+
+
+.mainTable th {
+    border-bottom: 2px solid #141F28;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.mainTable td {
+    border-bottom: 2px solid #141F28;
+    /* padding-top: 5px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0;   
+}
+
+
+.mainTable li {
+    display: none;
+    font-size: 10px; 
+    margin-bottom: 0; 
+    list-style-type: none;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+
+.mainTable p {
+    font-size: 10px; 
+    margin-bottom: 0; 
+}
+
+ /*  */
+ #addBttn {
+    -webkit-appearance: none; 
+    background-color: #111b24; 
+    color: white; 
+    font-size: 29px; 
+    border: 1px solid #111b24;  
+    text-align: center;
+}
+ 
+
+#addBttn :hover {
+    color: blue;
+}
+
+#delBttn {
+    -webkit-appearance: none; 
+    background-color: #111b24; 
+    color: white; 
+    font-size: 29px; 
+    border: 1px solid #111b24;  
+    text-align: center;
+}
+ 
+
+#delBttn :hover {
+    color: blue;
+}
+
+#pp { 
+    padding: 3px; 
+}
+
+#add {
+    font-size: 37px;
+    align-content: center;
+    text-align: center; 
+}
+
+.mainTable .ticker {
+    font-size: 18px;
+     width: 46%;
+}
+
+
+.mainTable a:link {
+    color: white;
+    text-decoration-line: none;
+}
+
+
+.mainTable a:visited {
+    color: white;
+    text-decoration-line: none;
+}
+
+
+.mainTable a:hover {
+    color: blue;
+    text-decoration-line: none;
+}
+ 
+
+#openPrice {
+    display: none;
+}
+
+#closePrice {
+    display: none;
+}
+
+.leftTable {
+    display: inline-block;
+    width: 40%; 
+}
+
+.rightTable {
+    display: inline-block;
+    width: 40%;
+}
+
+
+/* LINK */
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration-line: none;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration-line: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: blue;
+    text-decoration-line: none;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+    text-decoration-line: none;
+}
+
+div, tr, td {
+    /* border: solid black; */
+}
+
+.shoStock {
+    /* width: 100%; */
+    /* margin-left: 10px; */
+
+}
+
+.showStock {
+    color: white;
+    font-size: 15px; 
+    table-layout: fixed; 
+}
+
+.showStock li {
+    list-style-type: none;
+}
+
+.showStock td {
+    border-bottom: 2px solid #141F28;
+    /* padding-top: 5px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        /* background-color: red; */
+        background-color: #111b24;
+    }
+}
+
+
+ 

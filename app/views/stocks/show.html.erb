@@ -1,0 +1,139 @@
+ 
+    <div class="showBody">
+        <div class="namePrice">
+            <% @rowarraydisp.each do |row| %> 
+            <% if row[0] == @stock  %>
+              
+                <div class="showName">
+                  <%= @stock %>
+                </div>
+                <div class="showPrice">
+                    <%= row[2] %>
+                </div>
+                <div class="showChange">
+                    <%= row[6] %>%
+                </div>
+ 
+        </div>
+
+    </div>
+    <div class="showMenu">
+        <div class="showStat" id="statDiv">
+            <a href="#statDiv", id="keyStats">Key Stats</a>   
+        </div>
+        <div class="showProfile" id="profileDiv"> 
+            <a href="#profileDiv" >Profile</a>
+        </div>
+        <div class="showBlog" id="blogDiv"> 
+            <a href="#blogDiv" >Blog </a> 
+        </div>
+            
+    </div> 
+    
+    <div class="showBlogDiv">
+        <table style="text-align:left padding:5px;">
+            <tr>
+                <th id="statDiv">Open:</th>
+                <td><%= row[2] %></td>
+                <th>Close:</th>
+                <td><%= row[5] %></td> 
+            </tr>
+            <tr>
+                <th>High:</th>
+                <td><%= row[3] %></td>
+                <th>Low</th>
+                <td><%= row[4] %></td> 
+            </tr>
+            <tr>
+                <th>Volume:</th>
+                <td><%= row[7] %></td> 
+                <th> </th>
+                <td> </td> 
+                 
+            </tr>
+            <tr>    
+            </tr>  
+        </table>
+    </div> 
+ <% end %>
+  <% end %>
+    <div class="spacer"> Profile:</div> 
+
+    <div class="showProfileDiv">
+        <table style="text-align:left padding:5px;">
+            <tr>
+                <th class="profileTickerName">Name:</th>
+                <td>Apple company inc</td>
+            </tr>
+            <tr>
+                <th  class="stockExchange">Index:</th>
+                <td>NASDAQ</td> 
+            </tr>
+            <tr>
+                <th class="industryGroup">Industry:</th>
+                <td>Technology</td>
+            <tr>
+                <th class="businessAddress">Address</th>
+                <td>12 n arch st Philadelphia PA 19101</td> 
+            </tr>  
+            <tr>
+                <th class="phoneNum">Phone:</th>
+                <td>789189789</td>      
+            </tr>
+            <tr>
+                <th class="ceo"> Ceo:</th>
+                <td>steve jobs </td>     
+            </tr> 
+            <tr> 
+                <th colspan="2" class="shortDescription" style="text-align: left"> Summary:</th>
+            </tr>
+            <tr>
+                <td colspan="2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda at pariatur dolorum facilis est dicta ut consequuntur repudiandae commodi neque earum possimus, dignissimos reiciendis laudantium sunt officia iste iure in.</td> 
+            </tr> 
+        </table>   
+    </div>
+    
+    <div class="spacer">Blog:
+    </div> 
+
+    <div class="showBlogDiv">
+        <% @rowarraydisp.each do |row| %> 
+            <% if row[0] == @stock %> 
+                <div>
+                    <% if current_user %>
+                        <%= form_with(model: @post ) do |p |  %>
+                        Post: <br/> 
+                        <%= p.text_area :post , :id =>"title", :placeholder=>"Say something"%>
+                        <%= p.hidden_field :user_id, :value => @user.id %>
+                        <%= p.hidden_field :title, :value =>  @stock  %>
+                        <%= p.submit "Post" ,id: 'postBttn'%>
+                        <% end %>
+                    <% end %>
+
+                </div> 
+            <% end %>
+        <%end%>    
+        <div class="showPost">
+            <% @posts.each do |p| %>
+            <div class="showPosttime">
+                <table  class="posts"style="width:100%">
+                    <tr>
+                        <th class="postUserName" style="width:10px">Name:
+                            <%= Stock.post_user_name(p.user_id) %>
+                        </th>
+                        <td style="text-align:right"> | <%= time_ago_in_words(p.created_at) %> ago
+                        </td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">pix: <br> pix</th> 
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="" style="text-align:right"><%= p.post%></td>
+                    </tr>
+                </table>
+            </div>
+            <% end %>
+        </div>
+    </div>         
+ 

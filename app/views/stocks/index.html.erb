@@ -1,0 +1,64 @@
+ 
+ 
+    <div class="main">
+        <div class="mainHeader" >
+            <div class="allStocks" id="allStocks"  >
+                <%= link_to 'All', stocks_path %> 
+            </div> 
+            <div class="myStocks" id="myStocks" >
+                <% if current_user %>
+                  <%= link_to 'Mystocks', mystocks_path %> 
+                <% else %>
+                    <%= link_to 'Mystocks', new_user_session_path %>
+                <% end %>
+                
+            </div>
+
+        </div>
+        <div class="mainBody" id="mainBody">
+            <table class="mainTable">
+                <tr >
+                    <th style="width:40%">Symbol</th>
+                    <th style="width:19%">Price</th>
+                    <th style="width:18%">Change</th> 
+                    <th style="width:9%">Add</th> 
+                     
+                </tr> 
+            </table>
+           
+        </div>
+
+ 
+ <% @rowarraydisp.each do |row| %> 
+   <li class="all">
+        <table class="mainTable">
+            <tr class="tableName">
+                <td class='ticker' >
+                    <%= link_to row[0], stock_path(row[0]) %>
+                        <p> 
+                        </p> 
+                </td>    
+                <td class='price' ><%= row[3] %></td>
+                <td class='perCha' id='perChange' > <%= row[6] %>%</td>
+                <td class='add' id='add'  style='width:10%'>
+                    <p class= <%= row[0]%>, id='pp'>
+                        <% if current_user  %>
+                        <%= form_with(model: @stock, scope: "stock" ) do |form|  %>
+                        <%=form.hidden_field :stock_name, :value => row[0] %>
+                        <%=form.hidden_field :user_id, :value => @user.id  %>
+                        <%=form.hidden_field :cost, :value => 0 %> 
+                        <%= form.submit "+" ,id: 'addBttn'%>
+                        <% end %>
+                    <% else %>
+                        <%= link_to "+", new_user_session_path , id: 'addBttn'%>
+                    <% end %> 
+                    </p>
+                </td>
+                 
+            </tr>
+        </table>
+    </li> 
+
+        
+  
+<% end %>

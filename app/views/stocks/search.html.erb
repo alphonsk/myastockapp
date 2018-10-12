@@ -1,0 +1,46 @@
+ 
+
+
+    <div class="mainHeader" >
+        <div class="allStocks" id="allStocks" onclick="blue()">
+            <%= link_to 'All', stocks_path %> 
+        </div> 
+        <div class="myStocks" id="myStocks" onclick="blue()" >
+            <%= link_to 'Mystocks', mystocks_path %> 
+        </div>
+
+    </div>
+    <div class="searchMain">
+        <table class="searchTable">
+            <tr >
+                <th style="width:40%">Symbol</th>
+                <th style="width:19%">Price</th>
+                <th style="width:18%">Change</th> 
+                <th style="width:9%">Add</th>  
+            </tr> 
+            <tr class="tableName">
+                <td>
+                    <a href="/stocks/#{params[]}">
+                        AAPL   
+                    </a>
+                    <p>
+                        A piece of computer code
+                    </p> 
+                </td>
+                <td>111.11</td>
+                <td>2.22</td>
+                <td style='font-size:23px'>+</td>
+            </tr>
+            <tr>
+                <td>AAPL  
+                    <p>A piece of computer code</p>  
+                </td>
+                <td>111.10</td>
+                <td>2.22</td>
+                <td style='font-size:23px'>+</td>
+            </tr>
+        </table> 
+
+    </div>
+    
+ 

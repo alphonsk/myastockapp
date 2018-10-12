@@ -1,0 +1,37 @@
+$(document).on("turbolinks:load", function(){
+    
+    $("#searchBttn").click(function(){
+         alert("hhhhhhh")
+             entW = document.getElementById("char").value.toLowerCase(); 
+console.log(entW);
+console.log(0000);
+    });
+
+      $("#searchBttn").click(function(){
+         alert("hhhhhhh")
+             entW = document.getElementById("char").value.toLowerCase(); 
+console.log(entW);
+console.log(0000);
+    });
+    
+
+    function clickSubmit() {
+  $('button').on('click', event => {
+    event.preventDefault();
+    formReset();
+    var searchCriteria = $('input[type=text]').val();
+    var searchUpperCase = searchCriteria.toUpperCase();
+    console.log(searchUpperCase)
+   document.getElementById("demo").innerHTML = searchUpperCase ;
+ 
+
+  });
+
+}
+
+function formReset() {
+  $('.searchresults').empty(); 
+};
+ 
+
+ });

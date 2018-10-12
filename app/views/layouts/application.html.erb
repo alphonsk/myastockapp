@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stockapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   
+  </head> 
+  <body>
+    <div class="NavBar">
+        <div class="navLogo">  
+          <h4><b><%= link_to 'myStocks', stocks_path %></b></h4>
+        </div>
+        <div class="navSearch">
+          <div class="inp"> 
+            <input type="text" id="myText" placeholder="Search..">
+          </div>
+          <div class="hb" onclick="get()">
+          </div>
+        </div> 
+
+    </div>
+
+  <div class="spacer">
+    <div class="userLog">
+      <ul> 
+          <% if current_user %>
+            <li><%= Stock.email_user_name(current_user.email) %></li>
+            <li><%= link_to 'LogOut', destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+            <li><%= link_to 'SignIn', new_user_session_path %></li>
+            <li><%= link_to 'SignUp', new_user_registration_path %></li> 
+          <% end %> 
+         
+         
+      </ul>
+    </div> 
+  </div>
+  
+    <%= yield %>
+  </body>
+</html>
