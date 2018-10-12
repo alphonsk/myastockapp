@@ -66,7 +66,7 @@ class StocksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to stocks_url, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
-      format.js
+      format.js {render inline: "location.reload();" }
     end
   end
 

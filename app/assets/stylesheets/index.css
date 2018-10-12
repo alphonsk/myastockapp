@@ -319,6 +319,51 @@ div, tr, td {
     margin-bottom: 0;
 }
 
+
+
+/*  */
+
+
+ 
+.navSearch {
+    width: 58%;
+    height: 50px;
+    padding: 10px;
+    display: inline-block; 
+}
+
+.inp input[type=text] {
+    padding: 4px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 78%;
+    color: white;
+    background: grey;
+}
+
+.hb {
+    float: left;
+    width: 20%;
+    padding: 13px;
+    background: #2196F3; 
+    font-size: 17px;
+    border: 2px solid #2196F3;
+    border-left: none;
+    cursor: pointer;
+}
+
+.hb :hover {
+    background: #0b7dda;
+}
+
+#myText::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*  */
 @media only screen and (min-width: 600px) {
     body {
         /* background-color: red; */
