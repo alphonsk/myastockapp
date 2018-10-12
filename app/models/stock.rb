@@ -3,12 +3,12 @@ class Stock < ApplicationRecord
     require "http"
     require "json" 
 
-    read cvs file
-    def self.import(file)
-        CSV.foreach(file.path, headers: true ) do |x|
-            puts x
-        end
-    end 
+    # read cvs file
+    # def self.import(file)
+    #     CSV.foreach(file.path, headers: true ) do |x|
+    #         puts x
+    #     end
+    # end 
 
 
  def self.one(x)
